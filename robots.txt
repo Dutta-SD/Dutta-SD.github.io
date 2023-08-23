@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://sandipdutta.me/sitemap.xml
+Sitemap: https://Dutta-SD.github.io/sitemap.xml

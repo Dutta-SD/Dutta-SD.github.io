@@ -46,6 +46,37 @@ Aug 2019 – Jun 2023 · CGPA **9.58 / 10.00**
 
 ## Skills
 
-**Languages & Databases:** Java, Python, SQL, DynamoDB, PostgreSQL, Redis
-**Frameworks & AI/ML:** Spring Boot, AWS Bedrock, LangChain, RAG, MCP, PyTorch, SageMaker
-**Infrastructure & Tooling:** AWS (ECS, EC2, Lambda, S3, SNS, SQS), Docker, CloudWatch, JUnit, pytest
+<div class="skills">
+  <div class="skills-group">
+    <span class="skills-group-label">Languages &amp; Databases</span>
+    <span class="pill">Java</span>
+    <span class="pill">Python</span>
+    <span class="pill">SQL</span>
+    <span class="pill">DynamoDB</span>
+    <span class="pill">PostgreSQL</span>
+    <span class="pill">Redis</span>
+  </div>
+  <div class="skills-group">
+    <span class="skills-group-label">Frameworks &amp; AI/ML</span>
+    <span class="pill">Spring Boot</span>
+    <span class="pill">AWS Bedrock</span>
+    <span class="pill">LangChain</span>
+    <span class="pill">RAG</span>
+    <span class="pill">MCP</span>
+    <span class="pill">PyTorch</span>
+    <span class="pill">SageMaker</span>
+  </div>
+  <div class="skills-group">
+    <span class="skills-group-label">Infrastructure &amp; Tooling</span>
+    <span class="pill">AWS ECS</span>
+    <span class="pill">EC2</span>
+    <span class="pill">Lambda</span>
+    <span class="pill">S3</span>
+    <span class="pill">SNS</span>
+    <span class="pill">SQS</span>
+    <span class="pill">Docker</span>
+    <span class="pill">CloudWatch</span>
+    <span class="pill">JUnit</span>
+    <span class="pill">pytest</span>
+  </div>
+</div>

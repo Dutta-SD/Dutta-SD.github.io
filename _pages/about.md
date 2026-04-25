@@ -2,19 +2,23 @@
 layout: about
 title: About
 permalink: /
-subtitle: Tech Explorer, ML Enthusiast, and Avid Reader at Heart 🚀🤖📚
+subtitle: SDE @ Amazon · ML, Distributed Systems & Backend Engineering
 
 profile:
   align: right
   image: prof_pic.jpg
-  image_circular: true # crops the image to make it circular
+  image_circular: true
   address: >
-    <p>Kolkata, West Bengal, India</p>
+    <p>Bengaluru, India</p>
 
-news: false # includes a list of news items
-latest_posts: false # includes a list of the newest posts
-selected_papers: false # includes a list of papers marked as "selected={true}"
-social: true # includes social icons at the bottom of the page
+news: true
+latest_posts: false
+selected_papers: true
+social: true
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quam quisque id diam vel. Lorem mollis aliquam ut porttitor leo a. Sagittis aliquam malesuada bibendum arcu vitae elementum curabitur vitae nunc. Velit ut tortor pretium viverra suspendisse potenti. Ut aliquam purus sit amet luctus. Lectus proin nibh nisl condimentum. Pellentesque massa placerat duis ultricies lacus sed turpis tincidunt id. Et tortor consequat id porta nibh venenatis cras. Porta nibh venenatis cras sed felis eget. Aliquet porttitor lacus luctus accumsan tortor posuere ac ut. Integer enim neque volutpat ac tincidunt vitae semper quis. Aliquam sem et tortor consequat id porta nibh venenatis. Sed elementum tempus egestas sed sed risus pretium. Suspendisse in est ante in. Et magnis dis parturient montes nascetur ridiculus mus mauris vitae. Sed velit dignissim sodales ut eu sem. In ornare quam viverra orci sagittis eu volutpat odio.
+I'm Sandip — a Software Development Engineer at Amazon working at the intersection of backend systems, machine learning, and AI agents. I build production systems that move real numbers: ML pipelines serving multiple marketplaces, seller-facing experiences that save millions annually, and AI tooling that automates away the tedious parts of data engineering.
+
+Before Amazon I was a Research Software Engineer at IIT Kharagpur's VIP Lab, where I co-authored work on medical image segmentation ([FFLUNet](https://doi.org/10.1016/j.compbiomed.2025.110460), *Computers in Biology and Medicine*, 2025), radiotherapy autosegmentation ([DRAW](https://doi.org/10.1016/j.rcro.2025.100210), *RCR Open*, 2025), and vision transformers ([DualViT](https://link.springer.com/chapter/10.1007/978-3-031-78456-9_14), ICPR 2024). I graduated from Jadavpur University with a B.E. (Hons.) in Electronics and Telecommunication Engineering (CGPA 9.58/10).
+
+I write about distributed systems, ML infrastructure, and the odd engineering rabbit hole. Reach me by email or LinkedIn — I'm always up for a conversation about backend scale problems, ML systems, or books.

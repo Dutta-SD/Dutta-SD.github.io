@@ -1,77 +1,207 @@
 {
   "basics": {
-    "name": "Albert Einstein",
-    "label": "Scientist",
+    "name": "Sandip Dutta",
+    "label": "Software Development Engineer",
     "image": "",
-    "email": "albert@einstein.de",
-    "phone": "(912) 123-4567",
-    "url": "https://alshedivat.github.io/al-folio/",
-    "summary": "A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time",
+    "email": "sandip28dutta@gmail.com",
+    "phone": "+91-8961419611",
+    "url": "https://dutta-sd.github.io",
+    "summary": "Software Development Engineer at Amazon working on ML infrastructure, AI agents, and backend systems. Previously Research SWE at IIT Kharagpur's VIP Lab, with publications in medical image segmentation and vision transformers.",
     "location": {
-      "address": "2712 Broadway St",
-      "postalCode": "CA 94115",
-      "city": "San Francisco",
-      "countryCode": "US",
-      "region": "California"
+      "address": "",
+      "postalCode": "",
+      "city": "Bengaluru",
+      "countryCode": "IN",
+      "region": "Karnataka"
     },
     "profiles": [
       {
-        "network": "Twitter",
-        "username": "AlbertEinstein",
-        "url": "https://twitter.com/AlbertEinstein"
+        "network": "LinkedIn",
+        "username": "dutta-sd",
+        "url": "https://linkedin.com/in/dutta-sd"
+      },
+      {
+        "network": "GitHub",
+        "username": "Dutta-SD",
+        "url": "https://github.com/Dutta-SD"
       }
     ]
   },
   "work": [
     {
-      "name": "Institute for Advanced Study, Princeton University",
-      "position": "Professor of Theoretical Physics",
-      "url": "https://example.com",
-      "startDate": "1933-01-01",
-      "endDate": "1955-01-01",
-      "summary": "Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.",
+      "name": "Amazon",
+      "position": "Software Development Engineer",
+      "url": "https://amazon.com",
+      "startDate": "2024-01-01",
+      "endDate": "",
+      "summary": "Bengaluru, India. Backend, ML infrastructure, and AI agent systems serving global marketplaces.",
       "highlights": [
-        "Relativity"
+        "Own the delivery-time-prediction ML pipeline serving 3+ marketplaces; designed the training architecture on 20M+ records and drove integration across 3 partner teams, lifting prediction accuracy 15%.",
+        "Designed and shipped a React-based seller-facing prompt end-to-end across partner team systems, reducing missing items in multi-item orders and saving $650K+ annually.",
+        "Architected an AI agent that automates SQL editing, testing, and monitoring on a data warehouse platform, cutting manual data engineering work by 25%.",
+        "Led design and delivery of a company-wide AI-powered self-serve tool for auditing merchant flags across marketplaces, cutting support tickets by 20%.",
+        "Lowered infrastructure costs by 25% via EC2 right-sizing and auto-scaling; mentored a 2-month SDE intern from onboarding through launch."
+      ]
+    },
+    {
+      "name": "IIT Kharagpur — VIP Lab",
+      "position": "Research Software Engineer",
+      "url": "http://cse.iitkgp.ac.in/~pabitra/",
+      "startDate": "2023-07-01",
+      "endDate": "2024-01-01",
+      "summary": "Kharagpur, India. Medical imaging and deep-learning research with clinical deployments.",
+      "highlights": [
+        "Built a CLI tool that auto-segments radiotherapy structures in CT scans via parallel processing, cutting manual annotation time by 6x.",
+        "Consulted on rollout across 3 hospitals including Tata Medical Center, Kolkata, standardizing the imaging pipeline for multi-hospital compatibility.",
+        "Co-authored FFLUNet, a brain-tumor segmentation model using 95% fewer parameters than existing approaches, published in Computers in Biology and Medicine.",
+        "Co-authored DualViT, a vision-transformer image classification model, published at ICPR 2024."
+      ]
+    },
+    {
+      "name": "AwesomeSuite Inc.",
+      "position": "Software Development Intern",
+      "url": "",
+      "startDate": "2023-01-01",
+      "endDate": "2023-06-01",
+      "summary": "Remote.",
+      "highlights": [
+        "Cut API latency 40% by resolving N+1 queries, optimizing SQL, and adding caching.",
+        "Built a document conversion service on AWS Lambda and an end-to-end digital signing workflow."
+      ]
+    },
+    {
+      "name": "Amazon",
+      "position": "Software Development Engineer Intern",
+      "url": "https://amazon.com",
+      "startDate": "2022-05-01",
+      "endDate": "2022-07-01",
+      "summary": "Bengaluru, India.",
+      "highlights": [
+        "Automated tax-document metadata extraction, eliminating 75% of manual work and accelerating reporting 80%.",
+        "Cut data-pipeline runtime by 40% via optimized migration scripts."
       ]
     }
   ],
   "volunteer": [],
   "education": [
     {
-      "institution": "University of Zurich, Zurich, Switzerland",
-      "url": "https://www.uzh.ch/",
-      "area": "Software Development",
-      "studyType": "PhD",
-      "startDate": "1905-01-01",
-      "endDate": "1905-01-01",
-      "score": "",
-      "courses": [
-        "Theory of Relativity"
-      ]
+      "institution": "Jadavpur University, Kolkata",
+      "url": "https://jadavpuruniversity.in/",
+      "area": "Electronics and Telecommunication Engineering",
+      "studyType": "B.E. (Hons.)",
+      "startDate": "2019-08-01",
+      "endDate": "2023-06-01",
+      "score": "CGPA: 9.58 / 10.00",
+      "courses": []
     }
   ],
   "awards": [
     {
-      "title": "Nobel Prize in Physics",
-      "date": "1921-11-01",
-      "awarder": "Royal Swedish Academy of Sciences",
-      "summary": "The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'"
+      "title": "Smart India Hackathon 2022 — Finalist",
+      "date": "2022-08-01",
+      "awarder": "Government of India, Ministry of Education",
+      "summary": "Shortlisted to the national finals for CDIApp, a crop-disease detection system combining CNN-based image classification with a Gemini-powered remedy recommender."
     }
   ],
   "certificates": [],
-  "publications": [],
-  "skills": [],
-  "languages": [
+  "publications": [
     {
-      "language": "German",
-      "fluency": "Native speaker"
+      "name": "FFLUNet: Feature Fused Lightweight UNet for Brain Tumor Segmentation",
+      "publisher": "Computers in Biology and Medicine, vol. 194, art. 110460",
+      "releaseDate": "2025-01-01",
+      "url": "https://doi.org/10.1016/j.compbiomed.2025.110460",
+      "summary": "Kundu S, Dutta S, Mukhopadhyay J, Chakravorty N. Lightweight UNet variant achieving competitive brain-tumor segmentation accuracy with ~95% fewer parameters than prior state-of-the-art."
     },
+    {
+      "name": "Deep learning for Radiotherapy Autosegmentation Workflow (DRAW)",
+      "publisher": "The Royal College of Radiologists Open, vol. 3, art. 100210",
+      "releaseDate": "2025-01-01",
+      "url": "https://doi.org/10.1016/j.rcro.2025.100210",
+      "summary": "Chakraborty S, Mallick I, Dutta S, Mukhopadhyay J, Kundu S, Maity S, et al. End-to-end deep-learning autosegmentation workflow for radiotherapy planning, built on open-source components and validated across multiple hospitals."
+    },
+    {
+      "name": "DualViT: A Hierarchical Vision Transformer for Broad and Fine Class Embeddings",
+      "publisher": "International Conference on Pattern Recognition (ICPR) 2024, pp. 35–49",
+      "releaseDate": "2024-12-01",
+      "url": "https://link.springer.com/chapter/10.1007/978-3-031-78456-9_14",
+      "summary": "Chatterjee A, Dutta S, Mukhopadhyay J, Das PP. Hierarchical dual-branch ViT that jointly learns broad and fine-grained class embeddings for image classification."
+    },
+    {
+      "name": "An Efficient BERT Based Approach to Detect Aggression and Misogyny",
+      "publisher": "18th International Conference on Natural Language Processing (ICON) 2021",
+      "releaseDate": "2021-12-01",
+      "url": "https://aclanthology.org/2021.icon-main.60",
+      "summary": "Dutta S, Majumder U, Naskar SK. BERT + Tf-Idf + XGBoost pipeline for aggression and misogyny detection on social-media text."
+    },
+    {
+      "name": "Sdutta at CommA@ICON: A CNN-LSTM Model for Hate Detection",
+      "publisher": "ICON 2021 — Shared Task on Multilingual Gender Biased and Communal Language Identification",
+      "releaseDate": "2021-12-01",
+      "url": "https://aclanthology.org/2021.icon-multigen.8",
+      "summary": "Dutta S, Majumder U, Naskar SK. CNN-LSTM hybrid for multilingual aggression, misogyny, and communal-language detection."
+    }
+  ],
+  "skills": [
+    {
+      "name": "Languages & Databases",
+      "level": "",
+      "keywords": ["Java", "Python", "SQL", "DynamoDB", "PostgreSQL", "Redis"]
+    },
+    {
+      "name": "Frameworks & AI/ML",
+      "level": "",
+      "keywords": ["Spring Boot", "AWS Bedrock", "LangChain", "RAG", "MCP", "PyTorch", "SageMaker"]
+    },
+    {
+      "name": "Infrastructure & Tooling",
+      "level": "",
+      "keywords": ["AWS (ECS, EC2, Lambda, S3, SNS, SQS)", "Docker", "CloudWatch", "JUnit", "pytest"]
+    }
+  ],
+  "languages": [
     {
       "language": "English",
       "fluency": "Fluent"
+    },
+    {
+      "language": "Bengali",
+      "fluency": "Native"
+    },
+    {
+      "language": "Hindi",
+      "fluency": "Fluent"
     }
   ],
-  "interests": [],
+  "interests": [
+    {
+      "name": "Distributed Systems",
+      "keywords": ["consensus", "replication", "job queues", "storage engines"]
+    },
+    {
+      "name": "Applied ML",
+      "keywords": ["LLM agents", "retrieval", "medical imaging"]
+    },
+    {
+      "name": "Reading",
+      "keywords": ["non-fiction", "history", "systems papers"]
+    }
+  ],
   "references": [],
-  "projects": []
+  "projects": [
+    {
+      "name": "CDIApp — Crop Disease Detection",
+      "description": "Image-classification model (95% accuracy) that identifies crop diseases from leaf photos, paired with a Gemini-powered remedy recommender. Shortlisted for Smart India Hackathon 2022 finals.",
+      "highlights": [
+        "CNN-based classifier trained on public plant-disease datasets",
+        "LLM-backed remedy suggestions via Google Gemini API"
+      ],
+      "keywords": ["PyTorch", "CNN", "Gemini API", "Python"],
+      "startDate": "2022-01-01",
+      "endDate": "2022-09-01",
+      "url": "https://github.com/Dutta-SD",
+      "roles": ["Author"],
+      "entity": "Smart India Hackathon 2022",
+      "type": "project"
+    }
+  ]
 }

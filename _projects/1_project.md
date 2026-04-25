@@ -1,81 +1,26 @@
 ---
 layout: page
-title: project 1
-description: a project with a background image
-img: assets/img/12.jpg
+title: CDIApp — Crop Disease Detection
+description: A CNN-based crop-disease classifier paired with an LLM-powered remedy recommender. Shortlisted for Smart India Hackathon 2022 finals.
+img: assets/img/1.jpg
 importance: 1
-category: work
-related_publications: einstein1956investigations, einstein1950meaning
+category: shipped
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+**CDIApp** is a mobile-friendly tool that lets a farmer photograph a diseased leaf and receive (a) an identification of the disease and (b) a suggested remedy. It was built for **Smart India Hackathon 2022** and shortlisted for the national finals.
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+### What it does
+- Classifies crop leaf images into disease categories with **~95% accuracy** on the evaluation split.
+- Queries the **Google Gemini API** to generate region-appropriate remedy suggestions for the detected disease, grounded in the model's label and confidence.
+- Mobile-first UX so the tool is usable in low-bandwidth rural environments.
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+### How it works
+- **Model:** A convolutional network trained on public plant-disease datasets, fine-tuned with class-balanced sampling because disease frequencies are long-tailed in real fields.
+- **Inference:** Exported to a lightweight format for on-device or edge inference.
+- **Remedy generation:** Prompt template conditions Gemini on the predicted disease, crop type, and geographic region to produce actionable, locally-feasible suggestions rather than generic pesticide advice.
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
+### What I learned
+- Class imbalance dominates model behaviour for long-tailed agricultural datasets — resampling and focal loss mattered far more than architecture tweaks.
+- Pairing a narrow, accurate classifier with a general-purpose LLM is a pragmatic pattern: the CNN handles the part that needs precision, the LLM handles the part that needs breadth.
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, *bled* for your project, and then... you reveal its glory in the next row of images.
-
-
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
-
-
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
-
-{% raw %}
-```html
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-```
-{% endraw %}
+[Repository on GitHub →](https://github.com/Dutta-SD)

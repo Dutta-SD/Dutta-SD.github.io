@@ -1,0 +1,129 @@
+baseURL = "https://dutta-sd.github.io/"
+languageCode = "en-us"
+title = "Sandip Dutta"
+theme = "PaperMod"
+
+enableRobotsTXT = true
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+
+pygmentsUseClasses = true
+
+[minify]
+  disableXML = true
+  minifyOutput = true
+
+[params]
+  env = "production"
+  title = "Sandip Dutta"
+  description = "Personal site of Sandip Dutta — Software Development Engineer at Amazon. Backend, ML infrastructure, AI agents, and the occasional distributed-systems rabbit hole."
+  keywords = ["Sandip Dutta", "SDE", "Amazon", "Distributed Systems", "Machine Learning", "Backend Engineering"]
+  author = "Sandip Dutta"
+  DateFormat = "2006-01-02"
+  defaultTheme = "dark"
+  disableThemeToggle = false
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowWordCount = false
+  ShowRssButtonInSectionTermList = true
+  UseHugoToc = true
+  disableSpecial1stPost = false
+  disableScrollToTop = false
+  comments = false
+  hidemeta = false
+  hideSummary = false
+  showtoc = false
+  tocopen = false
+
+  [params.homeInfoParams]
+    Title = "Sandip Dutta"
+    Content = """
+I'm a Software Development Engineer at Amazon working at the intersection of backend systems, machine learning, and AI agents. I build production systems that move real numbers — ML pipelines serving multiple marketplaces, seller-facing experiences that save millions annually, and AI tooling that automates away the tedious parts of data engineering.
+
+Before Amazon I was a Research Software Engineer at IIT Kharagpur's VIP Lab, where I co-authored work on medical image segmentation ([FFLUNet](https://doi.org/10.1016/j.compbiomed.2025.110460), *Computers in Biology and Medicine*, 2025), radiotherapy autosegmentation ([DRAW](https://doi.org/10.1016/j.rcro.2025.100210), *RCR Open*, 2025), and vision transformers ([DualViT](https://link.springer.com/chapter/10.1007/978-3-031-78456-9_14), ICPR 2024). I graduated from Jadavpur University with a B.E. (Hons.) in Electronics and Telecommunication Engineering (CGPA 9.58/10).
+
+I write about distributed systems, ML infrastructure, and the odd engineering rabbit hole.
+"""
+
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/Dutta-SD"
+  [[params.socialIcons]]
+    name = "linkedin"
+    url = "https://linkedin.com/in/dutta-sd"
+  [[params.socialIcons]]
+    name = "googlescholar"
+    url = "https://scholar.google.com/citations?user=ZgBCreQAAAAJ&hl=en"
+  [[params.socialIcons]]
+    name = "email"
+    url = "mailto:sandip28dutta@gmail.com"
+  [[params.socialIcons]]
+    name = "cv"
+    url = "/cv/cv_sandipdutta.pdf"
+
+  [params.assets]
+    disableHLJS = false
+    disableFingerprinting = false
+    favicon = "/favicon.ico"
+
+  [params.label]
+    text = "Sandip Dutta"
+
+  [params.fuseOpts]
+    isCaseSensitive = false
+    shouldSort = true
+    location = 0
+    distance = 1000
+    threshold = 0.4
+    minMatchCharLength = 0
+    keys = ["title", "permalink", "summary", "content"]
+
+[menu]
+  [[menu.main]]
+    identifier = "experience"
+    name = "Experience"
+    url = "/experience/"
+    weight = 10
+  [[menu.main]]
+    identifier = "projects"
+    name = "Projects"
+    url = "/projects/"
+    weight = 20
+  [[menu.main]]
+    identifier = "publications"
+    name = "Publications"
+    url = "/publications/"
+    weight = 30
+  [[menu.main]]
+    identifier = "posts"
+    name = "Blog"
+    url = "/posts/"
+    weight = 40
+  [[menu.main]]
+    identifier = "cv"
+    name = "CV"
+    url = "/cv/CV_SandipDutta.pdf"
+    weight = 50
+  [[menu.main]]
+    identifier = "search"
+    name = "Search"
+    url = "/search/"
+    weight = 60
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[markup]
+  [markup.highlight]
+    noClasses = false
+    codeFences = true
+    guessSyntax = true
+    lineNos = false
+    style = "monokai"
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

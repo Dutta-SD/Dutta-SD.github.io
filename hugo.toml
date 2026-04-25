@@ -90,6 +90,11 @@ pygmentsUseClasses = true
 
 [menu]
   [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 5
+  [[menu.main]]
     identifier = "experience"
     name = "Experience"
     url = "/experience/"

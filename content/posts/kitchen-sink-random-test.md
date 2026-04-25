@@ -148,7 +148,7 @@ RETURNING jobs.*;
 
 ## LaTeX / Math
 
-Inline math works: the probability mass function of a Poisson with rate $\lambda$ is $P(X = k) = \frac{\lambda^k e^{-\lambda}}{k!}$, and $e^{i\pi} + 1 = 0$ remains as smug as ever.
+Inline math: the probability mass function of a Poisson with rate $\lambda$ is $P(X = k) = \frac{\lambda^k e^{-\lambda}}{k!}$, and $e^{i\pi} + 1 = 0$ remains as smug as ever.
 
 Block math — the Fourier transform:
 

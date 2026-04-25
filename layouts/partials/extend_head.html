@@ -2,10 +2,30 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous"
-  onload="renderMathInElement(document.body, {delimiters: [
-    {left: '$$', right: '$$', display: true},
-    {left: '$', right: '$', display: false},
-    {left: '\\(', right: '\\)', display: false},
-    {left: '\\[', right: '\\]', display: true}
-  ]});"></script>
+  onload="
+    // Hugo's passthrough emits single backslashes as '\\' in HTML text nodes.
+    // Walk text nodes and collapse pairs inside $...$ / $$...$$ / \(...\) / \[...\] regions.
+    (function () {
+      var article = document.querySelector('article, main') || document.body;
+      var walker = document.createTreeWalker(article, NodeFilter.SHOW_TEXT, null, false);
+      var nodes = [];
+      while (walker.nextNode()) nodes.push(walker.currentNode);
+      nodes.forEach(function (n) {
+        var s = n.nodeValue;
+        if (!s || s.indexOf('\\\\') < 0) return;
+        // Only touch nodes that look like they contain math delimiters.
+        if (!/\$\$|\$|\\\(|\\\[/.test(s)) return;
+        n.nodeValue = s.replace(/\\\\/g, '\\');
+      });
+      renderMathInElement(document.body, {
+        delimiters: [
+          { left: '$$', right: '$$', display: true },
+          { left: '$', right: '$', display: false },
+          { left: '\\(', right: '\\)', display: false },
+          { left: '\\[', right: '\\]', display: true }
+        ],
+        throwOnError: false
+      });
+    })();
+  "></script>
 {{- end -}}

@@ -1,10 +1,10 @@
 ---
-title: "A Distributed Job Scheduler: smoQS"
+title: "smoQS: A Distributed Queue + Job Scheduler"
 date: 2026-05-28
 draft: false
 math: true
 tags: ["queue", "project"]
-summary: "A Distributed Job Scheduler: smoQS"
+summary: "smoQS: A Distributed Queue + Job Scheduler"
 ---
 
 I finally started on this journey of creating a Distributed Scheduler. This blog post will be kindof like a changelog.

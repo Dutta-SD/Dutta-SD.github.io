@@ -29,50 +29,40 @@ The broker exposes a **REST API**. Clients submit jobs; workers reserve, ack, an
 - *Loss:* no streaming. A worker that wants near-zero dispatch latency will have to long-poll, which is workable but uglier than gRPC streaming or a raw socket.
 - *Deferred:* could add a streaming endpoint later if the polling overhead actually shows up. Not worth it on day one.
 
-## Web framework: Javalin
+## Web framework: Quarkus
 
-Started sketching this on Spring Boot out of habit. Killed it within an hour — way too much weight for what is essentially a router around a queue. Quarkus and Micronaut were tempting (good startup numbers, built-in DI), but "framework with opinions" was the exact thing I was running away from.
+Spring Boot was the obvious starting point but felt too heavy for a project this size. I do want opinions and structure — I just didn't want Spring's specific weight. That left a few real options:
 
-Ended up with **Javalin**. Thin wrapper over Jetty, no annotation magic, no auto-configuration. You instantiate a `Javalin` object and register routes on it. That's the whole story.
+| Framework  | Startup    | DI               | GraalVM native | Opinionated | Notes                                    |
+| ---------- | ---------- | ---------------- | -------------- | ----------- | ---------------------------------------- |
+| Spring Boot| ~3–5s      | Yes (runtime)    | Painful        | Heavily     | Too much weight                          |
+| Javalin    | sub-second | None             | Easy           | No          | Would need Dagger bolted on for DI       |
+| Micronaut  | ~1s        | Yes (compile)    | Good           | Yes         | Solid, smaller community                 |
+| Quarkus    | ~1s        | Yes (CDI/ArC)    | First-class    | Yes         | Designed around native-image from day 1  |
 
-**Tradeoffs:**
+Going with **Quarkus**. CDI is built in (compile-time, native-image-friendly), the dev loop has live reload, and the GraalVM tooling was first-class from the start — the framework was *designed* around native-image, not retrofitted to it. That kills the separate "DI library" decision: I don't need Dagger, because Quarkus's own ArC fills the same role.
 
-- *Win:* minimal surface area; the queue stays the protagonist.
-- *Loss:* no built-in DI, no opinionated config layer, no test slices — I have to wire those myself.
-- *Risk:* smaller community than Spring/Quarkus. If I hit something obscure I'm reading source code, not Stack Overflow.
-
-## Dependency injection: Dagger
-
-Javalin doesn't ship with DI. Fine for hello-world, but I want a container for the object graph — job store, dispatcher, lease manager, handlers all need to find each other. So: Guice or Dagger.
-
-| DI library | Wiring        | Reflection      | GraalVM         |
-| ---------- | ------------- | --------------- | --------------- |
-| Guice      | Runtime       | Heavy           | Painful         |
-| Dagger     | Compile-time  | None            | Native-friendly |
-
-Picking **Dagger**.
+I briefly considered Javalin + Dagger as a "lighter" stack, but it's basically reinventing what Quarkus already bundles, with worse defaults.
 
 **Tradeoffs:**
 
-- *Win:* compile-time wiring means errors at `javac` time, not at first request. Plays well with GraalVM.
-- *Loss:* `@Module` / `@Component` ceremony, slower edit-compile loop because of annotation processing.
-- *Why not Guice:* I plan to go GraalVM native image later, and Guice's runtime reflection means hand-writing reflection-config JSON for every injected class. I've done that before and didn't enjoy it.
+- *Win:* opinionated stack with batteries included — DI, config, REST (RESTEasy Reactive), test annotations, native-image build, all integrated.
+- *Loss:* more abstraction to learn upfront vs. a thin router; if I fight a Quarkus convention later that's a real cost.
+- *Why not Micronaut:* Quarkus has more momentum, better docs, and Red Hat's investment in the GraalVM path. Close call, but the tooling tipped it.
 
 ## Runtime: OpenJDK 17 now, GraalVM later
 
 Sticking with **OpenJDK 17** for the build-out. Standard tooling, fast iteration, easy to debug.
 
-**GraalVM native image** is the planned migration once the broker stabilises — for the startup-time and memory-footprint wins, especially if I ever want to run multiple broker instances on a small box.
+**GraalVM native image** is the planned migration once the broker stabilises — for the startup-time and memory-footprint wins. Quarkus makes this swap cheap: the same code builds either as a JVM jar or as a native binary.
 
 **Tradeoffs:**
 
 - *Win (GraalVM):* sub-100ms startup, lower RSS, single binary distribution.
-- *Loss (GraalVM):* slow native-image compile (minutes), worse debugging story (no JFR, harder profiling), reflection / dynamic-proxy gotchas. Not worth fighting during active development.
-- *Why 17 over 21:* I want to stay on an LTS that's broadly supported in libraries today; 21 is fine but I don't need virtual threads here, since the broker's concurrency model is queue-driven, not thread-per-request.
+- *Loss (GraalVM):* slow native-image compile (minutes), worse debugging story (no JFR, harder profiling), occasional reflection / dynamic-proxy gotchas. Not worth fighting during active development.
 
 ## Stack so far
 
 - **Language:** Java 17
-- **Web framework:** Javalin
-- **DI:** Dagger
+- **Framework:** Quarkus (with CDI for DI, RESTEasy for REST)
 - **Runtime:** OpenJDK 17 now, GraalVM native image later

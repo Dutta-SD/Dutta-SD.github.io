@@ -1,3 +1,8 @@
+{{- if eq (hugo.Environment) "production" -}}
+<script data-goatcounter="https://dutta-sd.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+{{- end -}}
+
 {{- if .Params.math -}}
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>

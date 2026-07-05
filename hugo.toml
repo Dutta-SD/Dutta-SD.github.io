@@ -115,6 +115,11 @@ pygmentsUseClasses = true
     url = "/posts/"
     weight = 40
   [[menu.main]]
+    identifier = "cv"
+    name = "CV"
+    url = "/cv/cv_sandipdutta.pdf"
+    weight = 50
+  [[menu.main]]
     identifier = "tags"
     name = "Tags"
     url = "/tags/"

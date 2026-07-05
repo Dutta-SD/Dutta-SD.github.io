@@ -2,10 +2,11 @@
 title: "Publications"
 url: "/publications/"
 summary: publications
+date: 2021-01-01
+lastmod: 2026-07-06
 ShowReadingTime: false
 ShowBreadCrumbs: false
 ShowPostNavLinks: false
-lastmod: 2026-07-06
 ---
 
 Full list on [Google Scholar](https://scholar.google.com/citations?user=ZgBCreQAAAAJ&hl=en).

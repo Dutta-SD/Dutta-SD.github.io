@@ -2,10 +2,11 @@
 title: "Experience"
 url: "/experience/"
 summary: experience
+date: 2024-01-01
+lastmod: 2026-07-06
 ShowReadingTime: false
 ShowBreadCrumbs: false
 ShowPostNavLinks: false
-lastmod: 2026-07-06
 ---
 
 ## Amazon — Software Development Engineer

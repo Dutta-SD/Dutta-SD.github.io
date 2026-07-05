@@ -115,6 +115,11 @@ pygmentsUseClasses = true
     url = "/posts/"
     weight = 40
   [[menu.main]]
+    identifier = "tags"
+    name = "Tags"
+    url = "/tags/"
+    weight = 55
+  [[menu.main]]
     identifier = "search"
     name = "Search"
     url = "/search/"

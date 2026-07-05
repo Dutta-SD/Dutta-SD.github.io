@@ -1,7 +1,7 @@
 ---
 title: "Kitchen Sink — Random Test Post"
 date: 2026-04-25
-draft: false
+draft: true
 math: true
 tags: ["test", "random", "kitchen-sink"]
 summary: "A random test post to verify markdown, code highlighting, and LaTeX rendering on the site. The content is deliberately nonsensical."

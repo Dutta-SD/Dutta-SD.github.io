@@ -4,7 +4,7 @@ date: 2026-05-28
 draft: false
 math: true
 tags: ["queue", "project"]
-summary: "smoQS: A Distributed Queue + Job Scheduler"
+summary: "Design decisions behind smoQS — why Java, why Quarkus, and how I'm building a distributed queue + scheduler in the open."
 ---
 
 I finally started on this journey of creating a Distributed Scheduler. This blog post will be kindof like a changelog.

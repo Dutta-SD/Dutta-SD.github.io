@@ -1,5 +1,4 @@
-/* Font — Inter for clear weight contrast */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap');
+/* Font variables — loaded via <link> in extend_head.html for non-blocking delivery */
 
 :root {
   --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, sans-serif;

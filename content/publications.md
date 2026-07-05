@@ -5,6 +5,7 @@ summary: publications
 ShowReadingTime: false
 ShowBreadCrumbs: false
 ShowPostNavLinks: false
+lastmod: 2026-07-06
 ---
 
 Full list on [Google Scholar](https://scholar.google.com/citations?user=ZgBCreQAAAAJ&hl=en).

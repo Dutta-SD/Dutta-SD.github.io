@@ -5,6 +5,7 @@ summary: experience
 ShowReadingTime: false
 ShowBreadCrumbs: false
 ShowPostNavLinks: false
+lastmod: 2026-07-06
 ---
 
 ## Amazon — Software Development Engineer

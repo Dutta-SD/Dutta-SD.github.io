@@ -3,6 +3,9 @@ resources/
 .hugo_build.lock
 .DS_Store
 
+# Favicon source zip
+favicon_io.zip
+
 # Claude Code
 .claude/
 
